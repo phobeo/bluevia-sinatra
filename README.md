@@ -22,3 +22,9 @@ Also, you need to export environment variables with your Bluevia key and secret,
 Once you have done all of the above, just run
 
     ruby bluevia-sinatra.rb
+    
+# FAQ
+
+* *oops, I'm getting an Oauth::Unauthorized error. What went wrong?*
+
+If you see a message like "OAuth::Unauthorized at /request 400 Bad Request" the more probable cause is that you are not using a valid consumer key and secret. Please make sure that your consumer key and secret values are correct and that they are exported into the correct environment variables (as explained in the Usage section above) Alternatively, feel free to overwrite the CONSUMER_KEY and CONSUMER_SECRET variables at the top of the file. 
