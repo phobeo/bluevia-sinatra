@@ -6,10 +6,7 @@ It allows you to test OAuth login (both via callback and entering oob pin), and 
 
 # Usage
 
-You will need the following gems (apart from anything needed to run sinatra, of course)
-
-    * ruby oauth (http://oauth.rubyforge.org/)
-    * bluevia ruby library (i used version 1.1 from https://bluevia.com/en/knowledge/sdks.Ruby) 
+You will need the following gems (apart from anything needed to run sinatra, of course): ruby oauth (http://oauth.rubyforge.org/) and bluevia ruby library (i used version 1.1 from https://bluevia.com/en/knowledge/sdks.Ruby) 
 
     gem install ruby-oauth
     wget https://bluevia.com/resources/files/f75/f75a71a3649785a39d08c47adfd7382c/bluevia-sdk-ruby-v1.1.zip
