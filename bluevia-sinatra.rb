@@ -10,10 +10,16 @@ enable :sessions
 # for dev we leave the ugly, yet verbosely useful error screen
 #disable :raise_errors, :show_exceptions
 
-# remember to set the env variables before executing the script
 CONSUMER_KEY = ENV['BLUEVIA_KEY']
 CONSUMER_SECRET = ENV['BLUEVIA_SECRET']
-SANDBOX_PREFIX = ENV['BLUEVIA_PREFIX']
+MSG_PREFIX = ENV['BLUEVIA_PREFIX']
+# remember to set the env variables before executing the script!
+if CONSUMER_KEY.nil? or CONSUMER_SECRET.nil? or MSG_PREFIX.nil? 
+  puts "Environment variables BLUEVIA_KEY, BLUEVIA_SECRET or BLUEVIA_PREFIX are not defined!"
+  puts "Please make sure you have setup your environment variables before executing"
+  puts "(see sample instructions at https://github.com/phobeo/bluevia-sinatra)"
+  exit
+end
 
 UK_SHORTCODE = "5480605"
 
